@@ -1,0 +1,145 @@
+.tables
+
+PRAGMA table_info(listings_clean);
+
+-- First 10 rows
+SELECT *
+FROM listings_clean
+LIMIT 10;
+
+-- Total number of listings
+SELECT COUNT(*) AS total_listings
+FROM listings_clean;
+
+-- Overall price summary
+SELECT
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    ROUND(MIN(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS min_price,
+    ROUND(MAX(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS max_price
+FROM listings_clean;
+
+-- Average price by neighbourhood
+SELECT
+    neighbourhood_cleansed,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY neighbourhood_cleansed
+ORDER BY avg_price DESC;
+
+-- Top 10 most expensive neighbourhoods
+SELECT
+    neighbourhood_cleansed,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY neighbourhood_cleansed
+ORDER BY avg_price DESC
+LIMIT 10;
+
+-- Top 10 cheapest neighbourhoods
+SELECT
+    neighbourhood_cleansed,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY neighbourhood_cleansed
+ORDER BY avg_price ASC
+LIMIT 10;
+
+-- Average price by room type
+SELECT
+    room_type,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY room_type
+ORDER BY avg_price DESC;
+
+-- Superhost vs non-superhost
+SELECT
+    Superhost_Status,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    ROUND(AVG(review_scores_rating), 2) AS avg_rating,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY Superhost_Status
+ORDER BY avg_price DESC;
+
+-- Host size group comparison
+SELECT
+    host_size_group,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price_per_guest, '$', ''), ',', '') AS REAL)), 2) AS avg_price_per_guest,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY host_size_group
+ORDER BY avg_price DESC;
+
+-- Average price per guest by neighbourhood
+SELECT
+    neighbourhood_cleansed,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price_per_guest, '$', ''), ',', '') AS REAL)), 2) AS avg_price_per_guest,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY neighbourhood_cleansed
+ORDER BY avg_price_per_guest DESC;
+
+-- Review score vs average price
+SELECT
+    ROUND(review_scores_rating, 0) AS rating_group,
+    ROUND(AVG(CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL)), 2) AS avg_price,
+    COUNT(*) AS listing_count
+FROM listings_clean
+WHERE review_scores_rating IS NOT NULL
+GROUP BY ROUND(review_scores_rating, 0)
+ORDER BY rating_group DESC;
+
+-- Highest-priced listings
+SELECT
+    id,
+    neighbourhood_cleansed,
+    room_type,
+    price,
+    accommodates,
+    bedrooms,
+    review_scores_rating,
+    Superhost_Status
+FROM listings_clean
+ORDER BY CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS REAL) DESC
+LIMIT 20;
+
+-- Average availability by room type
+SELECT
+    room_type,
+    ROUND(AVG(availability_365), 2) AS avg_availability,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY room_type
+ORDER BY avg_availability DESC;
+
+-- Neighbourhoods with the most listings
+SELECT
+    neighbourhood_cleansed,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY neighbourhood_cleansed
+ORDER BY listing_count DESC;
+
+-- Average number of reviews by room type
+SELECT
+    room_type,
+    ROUND(AVG(number_of_reviews), 2) AS avg_reviews,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY room_type
+ORDER BY avg_reviews DESC;
+
+-- Average minimum nights by room type
+SELECT
+    room_type,
+    ROUND(AVG(minimum_nights), 2) AS avg_minimum_nights,
+    COUNT(*) AS listing_count
+FROM listings_clean
+GROUP BY room_type
+ORDER BY avg_minimum_nights DESC;

@@ -1,0 +1,172 @@
+listings_clean
+0|id|TEXT|0||0
+1|host_id|TEXT|0||0
+2|host_since|TEXT|0||0
+3|host_is_superhost|TEXT|0||0
+4|host_listings_count|TEXT|0||0
+5|host_total_listings_count|TEXT|0||0
+6|host_identity_verified|TEXT|0||0
+7|neighbourhood_cleansed|TEXT|0||0
+8|latitude|TEXT|0||0
+9|longitude|TEXT|0||0
+10|room_type|TEXT|0||0
+11|accommodates|TEXT|0||0
+12|bedrooms|TEXT|0||0
+13|beds|TEXT|0||0
+14|price|TEXT|0||0
+15|minimum_nights|TEXT|0||0
+16|availability_365|TEXT|0||0
+17|number_of_reviews|TEXT|0||0
+18|review_scores_rating|TEXT|0||0
+19|reviews_per_month|TEXT|0||0
+20|Superhost_Status|TEXT|0||0
+21|price_per_guest|TEXT|0||0
+22|host_size_group|TEXT|0||0
+7.5082E+17|28066838|2015-02-20|f|1|1|t|Kitsilano|49.2684061|-123.155338|Entire home/apt|4|1|2|$14.00|30|281|0|||No|$3.50|Single Listing Host
+8.71972E+17|485530982|2022-10-29|f|1|2|t|Kitsilano|49.26050023|-123.1839084|Shared room|1||1|$14.00|31|166|0|||No|$14.00|Multi Listing Host
+36696946|275820030|2019-07-13|f|1|5|t|Victoria-Fraserview|49.21878|-123.06693|Entire home/apt|6|2|3|$21.00|1|0|16|4.75|0.34|No|$3.50|Multi Listing Host
+39106874|20440735|2014-08-23|f|1|1|f|Hastings-Sunrise|49.28346|-123.04316|Entire home/apt|13|13|13|$25.00|31|0|0|||No|$1.92|Single Listing Host
+45506921|363419014|2020-08-20|f|1|19|t|Kensington-Cedar Cottage|49.25697|-123.07558|Private room|1|1|1|$25.00|30|308|0|||No|$25.00|Multi Listing Host
+9201061|47789746|2015-10-30|f|1|1|t|Victoria-Fraserview|49.21929|-123.07629|Shared room|1||2|$27.00|180|0|2|2|0.03|No|$27.00|Single Listing Host
+21935365|50668496|2015-12-06||1|2|t|Kensington-Cedar Cottage|49.25683|-123.06639|Private room|2||1|$27.00|1|0|0|||Missing|$13.50|Multi Listing Host
+29659260|48023110|2015-11-02|f|1|2|t|Downtown Eastside|49.27726|-123.09873|Entire home/apt|1||1|$27.00|31|0|0|||No|$27.00|Multi Listing Host
+47341208|11067913|2014-01-06||4|13|t|Kensington-Cedar Cottage|49.26054|-123.07034|Private room|1||1|$27.00|30|99|7|4.43|0.28|Missing|$27.00|Multi Listing Host
+36108913|271614397|2019-06-26||1|1|f|Marpole|49.20599|-123.12547|Private room|2||1|$28.00|1|0|4|3.75|0.09|Missing|$14.00|Single Listing Host
+6355
+250.52|14.0|28386.0
+West Point Grey|673.22|113
+Marpole|440.01|155
+Arbutus Ridge|359.75|106
+Shaughnessy|303.51|73
+Downtown|276.11|1711
+Kerrisdale|270.12|102
+Kitsilano|267.42|482
+West End|242.5|502
+Riley Park|231.29|305
+Mount Pleasant|227.52|416
+Fairview|225.08|153
+Downtown Eastside|224.41|334
+Dunbar Southlands|217.05|211
+Oakridge|211.33|96
+Strathcona|207.87|38
+Kensington-Cedar Cottage|204.73|378
+South Cambie|199.09|76
+Grandview-Woodland|190.99|266
+Sunset|187.25|138
+Victoria-Fraserview|184.2|128
+Hastings-Sunrise|172.59|250
+Killarney|163.56|89
+Renfrew-Collingwood|162.44|233
+West Point Grey|673.22|113
+Marpole|440.01|155
+Arbutus Ridge|359.75|106
+Shaughnessy|303.51|73
+Downtown|276.11|1711
+Kerrisdale|270.12|102
+Kitsilano|267.42|482
+West End|242.5|502
+Riley Park|231.29|305
+Mount Pleasant|227.52|416
+Renfrew-Collingwood|162.44|233
+Killarney|163.56|89
+Hastings-Sunrise|172.59|250
+Victoria-Fraserview|184.2|128
+Sunset|187.25|138
+Grandview-Woodland|190.99|266
+South Cambie|199.09|76
+Kensington-Cedar Cottage|204.73|378
+Strathcona|207.87|38
+Oakridge|211.33|96
+Entire home/apt|269.52|5207
+Private room|165.24|1122
+Hotel room|162.33|3
+Shared room|119.61|23
+No|269.83|3.6|3194
+Yes|258.63|4.65|1976
+Missing|184.91|3.65|1185
+Multi Listing Host|254.7|80.27|4308
+Single Listing Host|241.7|72.86|2047
+West Point Grey|116.81|113
+Kerrisdale|101.54|102
+Shaughnessy|101.53|73
+Oakridge|97.81|96
+West End|93.15|502
+Downtown|90.22|1711
+Kitsilano|86.18|482
+Fairview|85.87|153
+Arbutus Ridge|85.16|106
+Strathcona|77.94|38
+Downtown Eastside|76.14|334
+Riley Park|73.81|305
+Marpole|71.74|155
+Mount Pleasant|70.31|416
+Dunbar Southlands|68.64|211
+South Cambie|59.19|76
+Kensington-Cedar Cottage|58.43|378
+Grandview-Woodland|55.42|266
+Sunset|55.1|138
+Hastings-Sunrise|51.43|250
+Victoria-Fraserview|50.51|128
+Renfrew-Collingwood|49.49|233
+Killarney|47.26|89
+5.0|240.64|4736
+4.0|187.72|436
+3.0|170.43|40
+2.0|264.25|12
+1.0|340.45|11
+0.0|318.57|1120
+20698278|Marpole|Private room|$28,386.00|2||4.71|Missing
+6.4648E+17|West Point Grey|Entire home/apt|$20,000.00|12|6||No
+20698187|Marpole|Private room|$12,674.00|2||4.71|Missing
+50461998|West Point Grey|Entire home/apt|$11,236.00|12|5||No
+33594153|Arbutus Ridge|Private room|$9,999.00|2|||Missing
+48083270|Mount Pleasant|Entire home/apt|$8,699.00|4|2|4.9|No
+50009999|West Point Grey|Entire home/apt|$8,252.00|16|5||No
+8.76766E+17|West Point Grey|Entire home/apt|$8,000.00|8|7||No
+5.79695E+17|Kensington-Cedar Cottage|Entire home/apt|$6,407.00|6|4|5|Yes
+12336968|Kensington-Cedar Cottage|Entire home/apt|$3,500.00|8|4|4.89|No
+8.05947E+17|Riley Park|Entire home/apt|$3,399.00|12|6|4.88|No
+37181228|Downtown|Entire home/apt|$3,250.00|2|1||No
+7.99278E+17|Mount Pleasant|Entire home/apt|$2,888.00|4|2||No
+53919299|Mount Pleasant|Entire home/apt|$2,600.00|8|2|1|No
+8.2614E+17|Downtown|Entire home/apt|$2,400.00|4|4||No
+7.02366E+17|West End|Entire home/apt|$2,393.00|13|5|5|Yes
+48082323|Fairview|Entire home/apt|$2,357.00|6|3|4.95|Yes
+33997048|Kerrisdale|Entire home/apt|$2,250.00|8|4|5|Yes
+44306270|Downtown|Entire home/apt|$2,200.00|2|1||No
+20634127|West End|Entire home/apt|$2,100.00|2|1|5|No
+Shared room|188.13|23
+Entire home/apt|133.27|5207
+Private room|131.54|1122
+Hotel room|41.33|3
+Downtown|1711
+West End|502
+Kitsilano|482
+Mount Pleasant|416
+Kensington-Cedar Cottage|378
+Downtown Eastside|334
+Riley Park|305
+Grandview-Woodland|266
+Hastings-Sunrise|250
+Renfrew-Collingwood|233
+Dunbar Southlands|211
+Marpole|155
+Fairview|153
+Sunset|138
+Victoria-Fraserview|128
+West Point Grey|113
+Arbutus Ridge|106
+Kerrisdale|102
+Oakridge|96
+Killarney|89
+South Cambie|76
+Shaughnessy|73
+Strathcona|38
+Entire home/apt|39.65|5207
+Private room|35.0|1122
+Hotel room|23.67|3
+Shared room|12.7|23
+Shared room|17.61|23
+Entire home/apt|16.67|5207
+Private room|13.75|1122
+Hotel room|2.33|3
